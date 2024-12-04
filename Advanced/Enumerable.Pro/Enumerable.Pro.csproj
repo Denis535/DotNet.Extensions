@@ -6,6 +6,6 @@
         <RootNamespace />
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Option.Pro" Version="1.0.3" />
+        <PackageReference Include="Option.Pro" Version="1.0.4" />
     </ItemGroup>
 </Project>

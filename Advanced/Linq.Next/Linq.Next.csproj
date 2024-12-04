@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>preview</LangVersion>
+
+        <!--Assembly attributes-->
+        <Version>1.2.17</Version>
+        <Description>The Linq.Next package is designed to extend the Linq and collections with additional useful features.</Description>
+        <Authors>Denis535</Authors>
+        <Company>Denis535</Company>
+        <Product>$(AssemblyName)</Product>
+        <Copyright></Copyright>
+        <RepositoryUrl>https://github.com/Denis535/Net.Extensions</RepositoryUrl>
+
+        <!--Package attributes-->
+        <IsPackable>true</IsPackable>
+        <Title>$(AssemblyName)</Title>
+        <PackageId>$(AssemblyName)</PackageId>
+        <PackageVersion>$(Version)</PackageVersion>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+        <PackageIcon>Icon.png</PackageIcon>
+        <PackageIconUrl></PackageIconUrl>
+        <PackageDescription>$(Description)</PackageDescription>
+        <PackageProjectUrl>https://github.com/Denis535/Net.Extensions</PackageProjectUrl>
+        <PackageTags>Linq; MoreLinq; Enumerable; Iterable; Peekable; Enumerator; Iterator</PackageTags>
+
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageLicenseUrl></PackageLicenseUrl>
+        <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+
+        <IsTool>false</IsTool>
+        <DevelopmentDependency>false</DevelopmentDependency>
+
+        <!--Pack options-->
+        <EnableDefaultItems>true</EnableDefaultItems>
+        <EnableDefaultNoneItems>true</EnableDefaultNoneItems>
+        <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+        <EnableDefaultEmbeddedResourceItems>true</EnableDefaultEmbeddedResourceItems>
+
+        <IncludeBuildOutput>true</IncludeBuildOutput>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeSymbols>false</IncludeSymbols>
+        <IncludeSource>false</IncludeSource>
+
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeBuilds</TargetsForTfmSpecificBuildOutput>
+        <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);IncludeContent</TargetsForTfmSpecificContentInPackage>
+    </PropertyGroup>
+
+    <!--Clean-->
+    <ItemGroup>
+        <Clean Include="$(PackageOutputPath)\*.nupkg" />
+    </ItemGroup>
+
+    <!--PackageReference-->
+    <ItemGroup>
+        <ProjectReference Include="..\Enumerable.Pro\Enumerable.Pro.csproj" />
+    </ItemGroup>
+
+    <!--Include builds-->
+    <Target Name="IncludeBuilds">
+        <ItemGroup>
+        </ItemGroup>
+    </Target>
+
+    <!--Include content-->
+    <Target Name="IncludeContent">
+        <ItemGroup>
+            <TfmSpecificPackageFile Include="Readme.md" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../../Icon.png" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../../LICENSE" PackagePath="/" />
+        </ItemGroup>
+    </Target>
+
+</Project>
