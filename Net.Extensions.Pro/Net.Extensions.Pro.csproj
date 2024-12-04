@@ -5,4 +5,7 @@
         <LangVersion>latest</LangVersion>
         <RootNamespace />
     </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Option.Pro" Version="1.0.3" />
+    </ItemGroup>
 </Project>
