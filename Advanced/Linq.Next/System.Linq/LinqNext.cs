@@ -1,4 +1,5 @@
-﻿namespace System.Linq {
+﻿#nullable enable
+namespace System.Linq {
     using System;
     using System.Collections;
     using System.Collections.Generic;

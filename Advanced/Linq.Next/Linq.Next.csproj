@@ -2,7 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <LangVersion>preview</LangVersion>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <RootNamespace />
 
         <!--Assembly attributes-->
         <Version>1.2.17</Version>
