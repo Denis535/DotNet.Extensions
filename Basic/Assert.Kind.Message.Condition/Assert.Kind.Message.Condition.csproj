@@ -13,7 +13,7 @@
         <Company>Denis535</Company>
         <Product>$(AssemblyName)</Product>
         <Copyright></Copyright>
-        <RepositoryUrl>https://github.com/Denis535/Assert.Kind.Message.Condition</RepositoryUrl>
+        <RepositoryUrl>https://github.com/denis535/Net.Extensions</RepositoryUrl>
 
         <!--Package attributes-->
         <IsPackable>true</IsPackable>
@@ -24,8 +24,8 @@
         <PackageIcon>Icon.png</PackageIcon>
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
-        <PackageProjectUrl>https://github.com/Denis535/Assert.Kind.Message.Condition</PackageProjectUrl>
-        <PackageTags>Assert; Log; Assertion; Exception; Logging</PackageTags>
+        <PackageProjectUrl>https://github.com/denis535/Net.Extensions</PackageProjectUrl>
+        <PackageTags>Assert; Assertion; Exception; Log; Logging; Debug; Debugger</PackageTags>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageLicenseUrl></PackageLicenseUrl>
