@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerable.Pro", "Enumerabl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumerable.Pro.Tests", "Enumerable.Pro.Tests\Enumerable.Pro.Tests.csproj", "{654DDD82-B6A2-412C-9BC5-7C789DBB78B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valuable.Pro", "Valuable.Pro\Valuable.Pro.csproj", "{D3AAA8CD-F5CE-456B-B636-5AA9394CB481}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{654DDD82-B6A2-412C-9BC5-7C789DBB78B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{654DDD82-B6A2-412C-9BC5-7C789DBB78B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{654DDD82-B6A2-412C-9BC5-7C789DBB78B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AAA8CD-F5CE-456B-B636-5AA9394CB481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AAA8CD-F5CE-456B-B636-5AA9394CB481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AAA8CD-F5CE-456B-B636-5AA9394CB481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AAA8CD-F5CE-456B-B636-5AA9394CB481}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
