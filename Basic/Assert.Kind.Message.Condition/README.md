@@ -69,7 +69,7 @@ throw Exceptions.Internal.NotSupported( $"NotSupportedException" )
 throw Exceptions.Internal.NotImplemented( $"NotImplementedException" )
 ```
 
-# Link
+# Links
 - https://github.com/denis535/Net.Extensions
 - https://www.nuget.org/packages/Assert.Kind.Message.Condition
 
