@@ -54,7 +54,7 @@
 
     <!--PackageReference-->
     <ItemGroup>
-        <ProjectReference Include="..\Enumerable.Pro\Enumerable.Pro.csproj" />
+        <ProjectReference Include="..\..\Basic\Enumerable.Pro\Enumerable.Pro.csproj" />
     </ItemGroup>
 
     <!--Include builds-->
