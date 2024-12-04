@@ -3,7 +3,7 @@ namespace System {
     using System.Collections;
     using System.Collections.Generic;
 
-    public class Tests_00 {
+    public class Tests {
 
         [Test]
         public void Test_00() {
