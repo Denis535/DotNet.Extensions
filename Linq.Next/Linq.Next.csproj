@@ -68,9 +68,9 @@
     <!--Include content-->
     <Target Name="IncludeContent">
         <ItemGroup>
-            <TfmSpecificPackageFile Include="Readme.md" PackagePath="/" />
-            <TfmSpecificPackageFile Include="../Icon.png" PackagePath="/" />
+            <TfmSpecificPackageFile Include="README.md" PackagePath="/" />
             <TfmSpecificPackageFile Include="../LICENSE" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../Icon.png" PackagePath="/" />
         </ItemGroup>
     </Target>
 

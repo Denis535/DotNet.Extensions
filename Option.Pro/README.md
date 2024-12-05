@@ -3,6 +3,7 @@ The Option.Pro package provides you with a container that may have some value (n
 
 # Reference
 ```
+namespace System;
 public static class Option {
 
     public static Option<T> Create<T>();

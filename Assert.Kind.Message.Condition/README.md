@@ -3,6 +3,7 @@ The Assert.Kind.Message.Condition pacakge provides you with an assertion library
 
 # Reference
 ```
+namespace System;
 public static class Assert {
     public static class Argument {
         public static Assertions.Argument Message(FormattableString? value);
