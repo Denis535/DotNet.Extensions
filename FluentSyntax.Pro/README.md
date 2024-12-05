@@ -1,5 +1,5 @@
 ﻿# Overview
-The Valuable.Pro package provides you with a several useful chaining methods for value processing.
+The FluentSyntax.Pro package provides you with a several useful chaining methods for convenient value processing.
 
 # Reference
 ```

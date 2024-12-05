@@ -55,13 +55,11 @@
         <Clean Include="$(PackageOutputPath)\*.nupkg" />
     </ItemGroup>
 
-    <!--Include Builds-->
     <Target Name="IncludeBuilds">
         <ItemGroup>
         </ItemGroup>
     </Target>
 
-    <!--Include Content-->
     <Target Name="IncludeContent">
         <ItemGroup>
             <TfmSpecificPackageFile Include="README.md" PackagePath="/" />

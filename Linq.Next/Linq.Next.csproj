@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+    
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
@@ -49,23 +49,19 @@
         <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);IncludeContent</TargetsForTfmSpecificContentInPackage>
     </PropertyGroup>
 
-    <!--Clean-->
-    <ItemGroup>
-        <Clean Include="$(PackageOutputPath)\*.nupkg" />
-    </ItemGroup>
-
-    <!--PackageReference-->
     <ItemGroup>
         <ProjectReference Include="..\Enumerable.Pro\Enumerable.Pro.csproj" />
     </ItemGroup>
 
-    <!--Include builds-->
+    <ItemGroup>
+        <Clean Include="$(PackageOutputPath)\*.nupkg" />
+    </ItemGroup>
+
     <Target Name="IncludeBuilds">
         <ItemGroup>
         </ItemGroup>
     </Target>
 
-    <!--Include content-->
     <Target Name="IncludeContent">
         <ItemGroup>
             <TfmSpecificPackageFile Include="README.md" PackagePath="/" />

@@ -49,18 +49,15 @@
         <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);IncludeContent</TargetsForTfmSpecificContentInPackage>
     </PropertyGroup>
 
-    <!--Clean-->
     <ItemGroup>
         <Clean Include="$(PackageOutputPath)\*.nupkg" />
     </ItemGroup>
 
-    <!--Include builds-->
     <Target Name="IncludeBuilds">
         <ItemGroup>
         </ItemGroup>
     </Target>
 
-    <!--Include content-->
     <Target Name="IncludeContent">
         <ItemGroup>
             <TfmSpecificPackageFile Include="README.md" PackagePath="/" />
