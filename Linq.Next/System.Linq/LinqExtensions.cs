@@ -4,7 +4,7 @@ namespace System.Linq {
     using System.Collections;
     using System.Collections.Generic;
 
-    public static class LinqNext {
+    public static class LinqExtensions {
 
         // Split
         // Split the items into segments (the separator is excluded)
