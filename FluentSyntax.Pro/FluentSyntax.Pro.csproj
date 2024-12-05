@@ -25,7 +25,7 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
         <PackageProjectUrl>https://github.com/denis535/DotNet.Extensions</PackageProjectUrl>
-        <PackageTags>chain; chaining; pipe; piping; pipeline; fluent interface</PackageTags>
+        <PackageTags>Chain; Chaining; Pipe; Piping; Pipeline; Fluent Interface</PackageTags>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageLicenseUrl></PackageLicenseUrl>
