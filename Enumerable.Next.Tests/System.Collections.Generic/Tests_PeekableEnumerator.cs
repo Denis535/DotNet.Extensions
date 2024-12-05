@@ -13,7 +13,7 @@
         public void Constructor() {
             using var source = new int[] { 0, 1, 2 }.AsEnumerable().GetEnumerator().AsPeekable();
             Assert.That( source.IsStarted, Is.False );
-            Assert.That( source.IsFinished, Is.False );
+            Assert.That( source.IsCompleted, Is.False );
             Assert.That( source.Current, Is.EqualTo( Option.Create<int>( null ) ) );
         }
 
@@ -88,7 +88,7 @@
             }
             static void AssertThatEqualTo(PeekableEnumerator<int> source, bool expected_isStarted, bool expected_isFinished, int? expected_current, int? expected_next) {
                 Assert.That( source.IsStarted, Is.EqualTo( expected_isStarted ) );
-                Assert.That( source.IsFinished, Is.EqualTo( expected_isFinished ) );
+                Assert.That( source.IsCompleted, Is.EqualTo( expected_isFinished ) );
                 Assert.That( source.Current, Is.EqualTo( Option.Create<int>( expected_current ) ) );
                 Assert.That( source.Peek(), Is.EqualTo( Option.Create<int>( expected_next ) ) );
             }
@@ -126,7 +126,7 @@
 
             source.Reset();
             Assert.That( source.IsStarted, Is.False );
-            Assert.That( source.IsFinished, Is.False );
+            Assert.That( source.IsCompleted, Is.False );
             Assert.That( source.Current, Is.EqualTo( Option.Create<int>( null ) ) );
         }
 
