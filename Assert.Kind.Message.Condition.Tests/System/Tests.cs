@@ -37,10 +37,10 @@ namespace System {
 
         [Test]
         public void Test_02_GetMessageString() {
-            TestContext.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Value: {null}" ) );
-            TestContext.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Value: {"777"}" ) );
-            TestContext.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Value: {777}" ) );
-            TestContext.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Values: {new object?[] { null, 777, "777" }}" ) );
+            TestContext.Out.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Value: {null}" ) );
+            TestContext.Out.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Value: {"777"}" ) );
+            TestContext.Out.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Value: {777}" ) );
+            TestContext.Out.WriteLine( Exceptions.Factory.GetMessageStringDelegate( $"Values: {new object?[] { null, 777, "777" }}" ) );
         }
 
     }
