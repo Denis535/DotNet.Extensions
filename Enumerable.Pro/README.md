@@ -1,5 +1,5 @@
 ﻿# Overview
-The Enumerable.Pro package provides you with several more advanced enumerators.
+The Enumerable.Pro package provides you with a several more advanced enumerators.
 
 # Reference
 ```
