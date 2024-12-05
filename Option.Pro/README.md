@@ -1,5 +1,5 @@
 # Overview
-The Option is a container that may have some value (null is also valid value) or may have nothing.
+The Option.Pro package provides you with a container that may have some value (null is also valid value) or may have nothing.
 
 # Reference
 ```

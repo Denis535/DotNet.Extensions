@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Enumerable.Next\Enumerable.Next.csproj" />
+      <ProjectReference Include="..\Enumerable.Pro\Enumerable.Pro.csproj" />
     </ItemGroup>
 
     <ItemGroup>

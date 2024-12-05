@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentSyntax.Pro", "FluentS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valuable.Pro", "Valuable.Pro\Valuable.Pro.csproj", "{D3AAA8CD-F5CE-456B-B636-5AA9394CB481}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerable.Next", "Enumerable.Next\Enumerable.Next.csproj", "{EAB970BD-9719-4402-BBBF-772FA3C0C70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerable.Pro", "Enumerable.Pro\Enumerable.Pro.csproj", "{EAB970BD-9719-4402-BBBF-772FA3C0C70F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerable.Next.Tests", "Enumerable.Next.Tests\Enumerable.Next.Tests.csproj", "{654DDD82-B6A2-412C-9BC5-7C789DBB78B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerable.Pro.Tests", "Enumerable.Pro.Tests\Enumerable.Pro.Tests.csproj", "{654DDD82-B6A2-412C-9BC5-7C789DBB78B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq.Next", "Linq.Next\Linq.Next.csproj", "{F69F714A-0F87-456B-8C1A-0A139249F6C5}"
 EndProject

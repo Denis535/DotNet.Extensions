@@ -1,5 +1,5 @@
 # Overview
-The assertion library with a very convenient method chaining api (aka fluent interface).
+The Assert.Kind.Message.Condition pacakge provides you with an assertion library with a very convenient fluent interface (aka method chaining).
 
 # Reference
 ```

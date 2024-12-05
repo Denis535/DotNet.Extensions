@@ -1,5 +1,5 @@
 ﻿# Overview
-The Linq.Next package is designed to extend the Linq and collections with additional useful features.
+The Linq.Next package provides you with a useful additions to the Linq.
 
 # Reference
 ```

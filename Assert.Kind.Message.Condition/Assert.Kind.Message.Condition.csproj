@@ -8,7 +8,7 @@
 
         <!--Assembly attributes-->
         <Version>1.0.10</Version>
-        <Description>The assertion library with a very convenient method chaining api.</Description>
+        <Description>The Assert.Kind.Message.Condition pacakge provides you with an assertion library with a very convenient fluent interface.</Description>
         <Authors>Denis535</Authors>
         <Company>Denis535</Company>
         <Product>$(AssemblyName)</Product>
