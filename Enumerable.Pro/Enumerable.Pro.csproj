@@ -20,7 +20,7 @@
         <Title>$(AssemblyName)</Title>
         <PackageId>$(AssemblyName)</PackageId>
         <PackageVersion>$(Version)</PackageVersion>
-        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>Icon.png</PackageIcon>
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
