@@ -23,5 +23,5 @@ public interface IValuable<T> {
 ```
 
 # Links
-- https://github.com/Denis535/Net.Extensions
+- https://github.com/Denis535/DotNet.Extensions
 - https://www.nuget.org/packages/Valuable.Pro

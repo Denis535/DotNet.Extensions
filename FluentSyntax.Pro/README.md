@@ -18,5 +18,5 @@ public static class LangExtensions {
 ```
 
 # Links
-- https://github.com/Denis535/Net.Extensions
+- https://github.com/Denis535/DotNet.Extensions
 - https://www.nuget.org/packages/FluentSyntax.Pro

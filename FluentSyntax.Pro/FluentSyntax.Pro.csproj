@@ -13,7 +13,7 @@
         <Company>Denis535</Company>
         <Product>$(AssemblyName)</Product>
         <Copyright></Copyright>
-        <RepositoryUrl>https://github.com/denis535/Net.Extensions</RepositoryUrl>
+        <RepositoryUrl>https://github.com/denis535/DotNet.Extensions</RepositoryUrl>
 
         <!--Package attributes-->
         <IsPackable>true</IsPackable>
@@ -24,7 +24,7 @@
         <PackageIcon>Icon.png</PackageIcon>
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
-        <PackageProjectUrl>https://github.com/denis535/Net.Extensions</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/denis535/DotNet.Extensions</PackageProjectUrl>
         <PackageTags>chain; chaining; pipe; piping; pipeline; fluent interface</PackageTags>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>

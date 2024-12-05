@@ -71,7 +71,7 @@ throw Exceptions.Internal.NotImplemented( $"NotImplementedException" )
 ```
 
 # Links
-- https://github.com/denis535/Net.Extensions
+- https://github.com/denis535/DotNet.Extensions
 - https://www.nuget.org/packages/Assert.Kind.Message.Condition
 
 # P.S.

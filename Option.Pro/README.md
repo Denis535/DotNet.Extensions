@@ -54,5 +54,5 @@ public readonly struct Option<T> : IEquatable<Option<T>>, IEquatable<T>, ICompar
 ```
 
 # Links
-- https://github.com/denis535/Net.Extensions
+- https://github.com/denis535/DotNet.Extensions
 - https://www.nuget.org/packages/Option.Pro
