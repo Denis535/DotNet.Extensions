@@ -7,8 +7,8 @@
         <RootNamespace />
 
         <!--Assembly attributes-->
-        <Version>1.0.4</Version>
-        <Description>The Option is a container that may have some value (null is also valid value) or may have nothing.</Description>
+        <Version>1.0.10</Version>
+        <Description>The assertion library with a very convenient method chaining api.</Description>
         <Authors>Denis535</Authors>
         <Company>Denis535</Company>
         <Product>$(AssemblyName)</Product>
@@ -17,7 +17,7 @@
 
         <!--Package attributes-->
         <IsPackable>true</IsPackable>
-        <Title>Option Pro</Title>
+        <Title>$(AssemblyName)</Title>
         <PackageId>$(AssemblyName)</PackageId>
         <PackageVersion>$(Version)</PackageVersion>
         <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -25,7 +25,7 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
         <PackageProjectUrl>https://github.com/denis535/Net.Extensions</PackageProjectUrl>
-        <PackageTags>option; optional; maybe; nullable</PackageTags>
+        <PackageTags>Assert; Assertion; Exception; Log; Logging; Debug; Debugger</PackageTags>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageLicenseUrl></PackageLicenseUrl>
@@ -35,8 +35,6 @@
         <DevelopmentDependency>false</DevelopmentDependency>
 
         <!--Pack options-->
-        <PackRelease>true</PackRelease>
-
         <EnableDefaultItems>true</EnableDefaultItems>
         <EnableDefaultNoneItems>true</EnableDefaultNoneItems>
         <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
@@ -51,22 +49,23 @@
         <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);IncludeContent</TargetsForTfmSpecificContentInPackage>
     </PropertyGroup>
 
+    <!--Clean-->
     <ItemGroup>
         <Clean Include="$(PackageOutputPath)\*.nupkg" />
     </ItemGroup>
 
-    <!--Include Builds-->
+    <!--Include builds-->
     <Target Name="IncludeBuilds">
         <ItemGroup>
         </ItemGroup>
     </Target>
 
-    <!--Include Content-->
+    <!--Include content-->
     <Target Name="IncludeContent">
         <ItemGroup>
             <TfmSpecificPackageFile Include="README.md" PackagePath="/" />
-            <TfmSpecificPackageFile Include="../../LICENSE" PackagePath="/" />
-            <TfmSpecificPackageFile Include="../../Icon.png" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../LICENSE" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../Icon.png" PackagePath="/" />
         </ItemGroup>
     </Target>
 

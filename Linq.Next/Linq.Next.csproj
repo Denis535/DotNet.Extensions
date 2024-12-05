@@ -56,7 +56,7 @@
 
     <!--PackageReference-->
     <ItemGroup>
-        <ProjectReference Include="..\..\Basic\Enumerable.Pro\Enumerable.Pro.csproj" />
+        <ProjectReference Include="..\Enumerable.Pro\Enumerable.Pro.csproj" />
     </ItemGroup>
 
     <!--Include builds-->
@@ -69,8 +69,8 @@
     <Target Name="IncludeContent">
         <ItemGroup>
             <TfmSpecificPackageFile Include="Readme.md" PackagePath="/" />
-            <TfmSpecificPackageFile Include="../../Icon.png" PackagePath="/" />
-            <TfmSpecificPackageFile Include="../../LICENSE" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../Icon.png" PackagePath="/" />
+            <TfmSpecificPackageFile Include="../LICENSE" PackagePath="/" />
         </ItemGroup>
     </Target>
 
