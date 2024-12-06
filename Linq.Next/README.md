@@ -4,7 +4,7 @@ The Linq.Next package provides you with a useful additions to the Linq.
 # Reference
 ```
 namespace System.Linq;
-public static class LinqNext {
+public static class LinqExtensions {
 
     // Split
     // Split the items into segments (the separator is excluded)
