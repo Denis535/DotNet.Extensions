@@ -22,10 +22,6 @@ public class StatefulEnumerator<T> : IEnumerator<T> {
     public StatefulEnumerator(IEnumerator<T> source);
     public void Dispose();
 
-    object? IEnumerator.Current { get; }
-    bool IEnumerator.MoveNext();
-    T IEnumerator<T>.Current { get; }
-
     public Option<T> Take();
     public void Reset();
 
@@ -40,10 +36,6 @@ public class PeekableEnumerator<T> : IEnumerator<T> {
 
     public PeekableEnumerator(IEnumerator<T> source);
     public void Dispose();
-
-    object? IEnumerator.Current { get; }
-    bool IEnumerator.MoveNext();
-    T IEnumerator<T>.Current { get; }
 
     public Option<T> Take();
     public Option<T> Peek();
