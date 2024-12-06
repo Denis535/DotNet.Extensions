@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    
+
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
@@ -25,7 +25,7 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
         <PackageProjectUrl>https://github.com/Denis535/DotNet.Extensions</PackageProjectUrl>
-        <PackageTags>Linq; MoreLinq; Enumerable; Iterable; Peekable; Enumerator; Iterator</PackageTags>
+        <PackageTags>Enumerable; Iterable; Peekable; Enumerator; Iterator; Linq; MoreLinq;</PackageTags>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageLicenseUrl></PackageLicenseUrl>
@@ -54,7 +54,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Enumerable.Pro" Version="1.0.1" />
+        <PackageReference Include="Enumerable.Pro" Version="1.0.1" />
     </ItemGroup>
 
     <Target Name="IncludeBuilds">
