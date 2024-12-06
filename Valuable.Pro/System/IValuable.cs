@@ -12,8 +12,8 @@ namespace System {
     }
     internal readonly struct Valuable_Empty<T> : IValuable<T> {
 
-        //public Valuable_Empty() {
-        //}
+        public Valuable_Empty() {
+        }
 
         public bool TryGetValue([MaybeNullWhen( false )] out T value) {
             value = default;
