@@ -25,7 +25,7 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageDescription>$(Description)</PackageDescription>
         <PackageProjectUrl>https://github.com/denis535/DotNet.Extensions</PackageProjectUrl>
-        <PackageTags>option; optional; maybe; nullable</PackageTags>
+        <PackageTags>Option; Optional; Maybe; Null; Nullable; Nullability</PackageTags>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageLicenseUrl></PackageLicenseUrl>
