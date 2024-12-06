@@ -17,10 +17,10 @@ namespace System {
         public T? ValueOrDefault => hasValue ? value : default; // always is null/default when Option has no value
 
         // Constructor
-        public Option() {
-            this.hasValue = false;
-            this.value = default!;
-        }
+        //public Option() {
+        //    this.hasValue = false;
+        //    this.value = default!;
+        //}
         internal Option(T value) {
             this.hasValue = true;
             this.value = value;

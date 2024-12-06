@@ -71,7 +71,7 @@ namespace System.Diagnostics.CodeAnalysis {
     internal sealed class MemberNotNullAttribute : Attribute {
         public string[] Members { get; }
         public MemberNotNullAttribute(string member) {
-            Members = [ member ];
+            Members = new[] { member };
         }
         public MemberNotNullAttribute(params string[] members) {
             Members = members;
@@ -84,7 +84,7 @@ namespace System.Diagnostics.CodeAnalysis {
         public string[] Members { get; }
         public MemberNotNullWhenAttribute(bool returnValue, string member) {
             ReturnValue = returnValue;
-            Members = [ member ];
+            Members = new[] { member };
         }
         public MemberNotNullWhenAttribute(bool returnValue, params string[] members) {
             ReturnValue = returnValue;
