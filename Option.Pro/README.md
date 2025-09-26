@@ -1,9 +1,11 @@
 # Overview
-The Option.Pro package provides you with a container that may have some value (null is also valid value) or may have nothing.
+The Option is a container that may hold some value or be empty.
 
 # Reference
+
+###### System
+
 ```
-namespace System;
 [Serializable]
 public readonly struct Option<T> : IEquatable<Option<T>>, IEquatable<T>, IComparable<Option<T>>, IComparable<T> {
 
@@ -11,7 +13,7 @@ public readonly struct Option<T> : IEquatable<Option<T>>, IEquatable<T>, ICompar
     public T Value { get; }
     public T? ValueOrDefault { get; }
 
-    public Option();
+    internal Option();
 
     public bool TryGetValue(out T? value);
 
