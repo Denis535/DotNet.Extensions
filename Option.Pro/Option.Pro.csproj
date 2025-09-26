@@ -8,7 +8,7 @@
 
         <!--Assembly attributes-->
         <Version>1.1.1</Version>
-        <Description>The Option.Pro package provides you with a container that may have some value (null is also valid value) or may have nothing.</Description>
+        <Description>The Option is a container that may hold some value or be empty.</Description>
         <Authors>Denis535</Authors>
         <Company>Denis535</Company>
         <Product>$(AssemblyName)</Product>
