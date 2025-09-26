@@ -122,7 +122,7 @@
         [Test]
         public void Reset() {
             using var source = new int[] { 0, 1, 2 }.AsEnumerable().GetEnumerator().AsPeekable();
-            ((IEnumerator<int>) source).MoveNext();
+            _ = ((IEnumerator<int>) source).MoveNext();
 
             source.Reset();
             Assert.That( source.IsStarted, Is.False );

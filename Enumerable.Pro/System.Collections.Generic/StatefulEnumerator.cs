@@ -13,35 +13,37 @@ namespace System.Collections.Generic {
 
         // Constructor
         public StatefulEnumerator(IEnumerator<T> source) {
-            Source = source;
+            this.Source = source;
         }
         public void Dispose() {
-            Source.Dispose();
+            this.Source.Dispose();
         }
 
         // IEnumerator
-        object? IEnumerator.Current => Current.Value;
-        bool IEnumerator.MoveNext() => Take().HasValue;
+        object? IEnumerator.Current => this.Current.Value;
+        bool IEnumerator.MoveNext() {
+            return this.Take().HasValue;
+        }
         // IEnumerator<T>
-        T IEnumerator<T>.Current => Current.Value;
+        T IEnumerator<T>.Current => this.Current.Value;
 
         // Take
         public Option<T> Take() {
-            if (Source.MoveNext()) {
-                (IsStarted, IsCompleted) = (true, false);
-                Current = Option.Create( Source.Current );
-                return Current;
+            if (this.Source.MoveNext()) {
+                (this.IsStarted, this.IsCompleted) = (true, false);
+                this.Current = Option.Create( this.Source.Current );
+                return this.Current;
             }
-            (IsStarted, IsCompleted) = (true, true);
-            Current = default;
-            return Current;
+            (this.IsStarted, this.IsCompleted) = (true, true);
+            this.Current = default;
+            return this.Current;
         }
 
         // Reset
         public void Reset() {
-            Source.Reset();
-            (IsStarted, IsCompleted) = (false, false);
-            Current = default;
+            this.Source.Reset();
+            (this.IsStarted, this.IsCompleted) = (false, false);
+            this.Current = default;
         }
 
     }

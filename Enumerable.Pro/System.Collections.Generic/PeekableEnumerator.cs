@@ -14,53 +14,55 @@ namespace System.Collections.Generic {
 
         // Constructor
         public PeekableEnumerator(IEnumerator<T> source) {
-            Source = source;
+            this.Source = source;
         }
         public void Dispose() {
-            Source.Dispose();
+            this.Source.Dispose();
         }
 
         // IEnumerator
-        object? IEnumerator.Current => Current.Value;
-        bool IEnumerator.MoveNext() => Take().HasValue;
+        object? IEnumerator.Current => this.Current.Value;
+        bool IEnumerator.MoveNext() {
+            return this.Take().HasValue;
+        }
         // IEnumerator<T>
-        T IEnumerator<T>.Current => Current.Value;
+        T IEnumerator<T>.Current => this.Current.Value;
 
         // Take
         public Option<T> Take() {
-            if (Next.HasValue) {
-                (IsStarted, IsCompleted) = (true, false);
-                (Current, Next) = (Next, default);
-                return Current;
+            if (this.Next.HasValue) {
+                (this.IsStarted, this.IsCompleted) = (true, false);
+                (this.Current, this.Next) = (this.Next, default);
+                return this.Current;
             }
-            if (Source.MoveNext()) {
-                (IsStarted, IsCompleted) = (true, false);
-                (Current, Next) = (Option.Create( Source.Current ), default);
-                return Current;
+            if (this.Source.MoveNext()) {
+                (this.IsStarted, this.IsCompleted) = (true, false);
+                (this.Current, this.Next) = (Option.Create( this.Source.Current ), default);
+                return this.Current;
             }
-            (IsStarted, IsCompleted) = (true, true);
-            (Current, Next) = (default, default);
-            return Current;
+            (this.IsStarted, this.IsCompleted) = (true, true);
+            (this.Current, this.Next) = (default, default);
+            return this.Current;
         }
 
         // Peek
         public Option<T> Peek() {
-            if (Next.HasValue) {
-                return Next;
+            if (this.Next.HasValue) {
+                return this.Next;
             }
-            if (Source.MoveNext()) {
-                Next = Option.Create( Source.Current );
-                return Next;
+            if (this.Source.MoveNext()) {
+                this.Next = Option.Create( this.Source.Current );
+                return this.Next;
             }
-            Next = default;
-            return Next;
+            this.Next = default;
+            return this.Next;
         }
 
         // Reset
         public void Reset() {
-            Source.Reset();
-            (IsStarted, IsCompleted) = (false, false);
-            (Current, Next) = (default, default);
+            this.Source.Reset();
+            (this.IsStarted, this.IsCompleted) = (false, false);
+            (this.Current, this.Next) = (default, default);
         }
 
     }

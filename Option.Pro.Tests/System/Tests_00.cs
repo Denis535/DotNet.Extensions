@@ -10,7 +10,7 @@ namespace System {
             {
                 var value = (Option<int>) default;
                 Assert.That( value.HasValue, Is.False );
-                Assert.Throws<InvalidOperationException>( () => _ = value.Value );
+                _ = Assert.Throws<InvalidOperationException>( () => _ = value.Value );
                 Assert.That( value.ValueOrDefault, Is.Zero );
 
                 Assert.That( value.ToString(), Is.EqualTo( "Nothing" ) );
@@ -21,7 +21,7 @@ namespace System {
             {
                 var value = new Option<int>();
                 Assert.That( value.HasValue, Is.False );
-                Assert.Throws<InvalidOperationException>( () => _ = value.Value );
+                _ = Assert.Throws<InvalidOperationException>( () => _ = value.Value );
                 Assert.That( value.ValueOrDefault, Is.Zero );
 
                 Assert.That( value.ToString(), Is.EqualTo( "Nothing" ) );
@@ -36,7 +36,7 @@ namespace System {
             {
                 var value = Option.Create<int>();
                 Assert.That( value.HasValue, Is.False );
-                Assert.Throws<InvalidOperationException>( () => _ = value.Value );
+                _ = Assert.Throws<InvalidOperationException>( () => _ = value.Value );
                 Assert.That( value.ValueOrDefault, Is.Zero );
 
                 Assert.That( value.ToString(), Is.EqualTo( "Nothing" ) );
@@ -58,7 +58,7 @@ namespace System {
             {
                 var value = Option.Create<int>( null );
                 Assert.That( value.HasValue, Is.False );
-                Assert.Throws<InvalidOperationException>( () => _ = value.Value );
+                _ = Assert.Throws<InvalidOperationException>( () => _ = value.Value );
                 Assert.That( value.ValueOrDefault, Is.Zero );
 
                 Assert.That( value.ToString(), Is.EqualTo( "Nothing" ) );

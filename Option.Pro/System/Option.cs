@@ -8,13 +8,13 @@ namespace System {
     [Serializable]
     public readonly struct Option<T> : IEquatable<Option<T>>, IEquatable<T>, IComparable<Option<T>>, IComparable<T> {
 
-        private readonly bool hasValue;
-        private readonly T value; // always is null/default when Option has no value
+        private readonly bool m_HasValue;
+        private readonly T m_Value; // always is null/default when Option has no value
 
         // Value
-        public bool HasValue => hasValue;
-        public T Value => hasValue ? value : throw new InvalidOperationException( "Option has no value" );
-        public T? ValueOrDefault => hasValue ? value : default; // always is null/default when Option has no value
+        public bool HasValue => this.m_HasValue;
+        public T Value => this.m_HasValue ? this.m_Value : throw new InvalidOperationException( "Option has no value" );
+        public T? ValueOrDefault => this.m_HasValue ? this.m_Value : default; // always is null/default when Option has no value
 
         // Constructor
         //public Option() {
@@ -22,14 +22,14 @@ namespace System {
         //    this.value = default!;
         //}
         internal Option(T value) {
-            this.hasValue = true;
-            this.value = value;
+            this.m_HasValue = true;
+            this.m_Value = value;
         }
 
         // TryGetValue
         public bool TryGetValue([MaybeNullWhen( false )] out T value) {
-            if (HasValue) {
-                value = Value;
+            if (this.HasValue) {
+                value = this.Value;
                 return true;
             }
             value = default;
@@ -37,41 +37,45 @@ namespace System {
         }
 
         // Equals
-        bool IEquatable<Option<T>>.Equals(Option<T> other) => IsEqualTo( other );
-        bool IEquatable<T>.Equals(T other) => IsEqualTo( other );
+        bool IEquatable<Option<T>>.Equals(Option<T> other) {
+            return this.IsEqualTo( other );
+        }
+        bool IEquatable<T>.Equals(T other) {
+            return this.IsEqualTo( other );
+        }
 
         // IsEqualTo
         public bool IsEqualTo(Option<T> other) {
-            if (HasValue && other.HasValue) return EqualityComparer<T>.Default.Equals( Value, other.Value );
-            return EqualityComparer<bool>.Default.Equals( HasValue, other.HasValue );
+            if (this.HasValue && other.HasValue) return EqualityComparer<T>.Default.Equals( this.Value, other.Value );
+            return EqualityComparer<bool>.Default.Equals( this.HasValue, other.HasValue );
         }
         public bool IsEqualTo(T other) {
-            if (HasValue && true) return EqualityComparer<T>.Default.Equals( Value, other );
-            return EqualityComparer<bool>.Default.Equals( HasValue, true );
+            if (this.HasValue && true) return EqualityComparer<T>.Default.Equals( this.Value, other );
+            return EqualityComparer<bool>.Default.Equals( this.HasValue, true );
         }
 
         // CompareTo
         public int CompareTo(Option<T> other) {
-            if (HasValue && other.HasValue) return Comparer<T>.Default.Compare( Value, other.Value );
-            return Comparer<bool>.Default.Compare( HasValue, other.HasValue );
+            if (this.HasValue && other.HasValue) return Comparer<T>.Default.Compare( this.Value, other.Value );
+            return Comparer<bool>.Default.Compare( this.HasValue, other.HasValue );
         }
         public int CompareTo(T other) {
-            if (HasValue && true) return Comparer<T>.Default.Compare( Value, other );
-            return Comparer<bool>.Default.Compare( HasValue, true );
+            if (this.HasValue && true) return Comparer<T>.Default.Compare( this.Value, other );
+            return Comparer<bool>.Default.Compare( this.HasValue, true );
         }
 
         // Utils
         public override string ToString() {
-            if (HasValue) return Value?.ToString() ?? "Null";
+            if (this.HasValue) return this.Value?.ToString() ?? "Null";
             return "Nothing";
         }
         public override bool Equals(object? other) {
-            if (other is Option<T> other_) return IsEqualTo( other_ );
-            if (other is T other__) return IsEqualTo( other__ );
+            if (other is Option<T> other_) return this.IsEqualTo( other_ );
+            if (other is T other__) return this.IsEqualTo( other__ );
             return false;
         }
         public override int GetHashCode() {
-            if (HasValue) return Value?.GetHashCode() ?? 0;
+            if (this.HasValue) return this.Value?.GetHashCode() ?? 0;
             return 0;
         }
 

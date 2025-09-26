@@ -23,31 +23,31 @@ namespace System {
     }
     internal readonly struct Valuable_Value<T> : IValuable<T> {
 
-        private readonly T value;
+        private readonly T m_Value;
 
         public Valuable_Value(T value) {
-            this.value = value;
+            this.m_Value = value;
         }
 
         public bool TryGetValue([MaybeNullWhen( false )] out T value) {
-            value = this.value;
+            value = this.m_Value;
             return true;
         }
 
     }
     internal readonly struct Valuable_ValueSelector<T, TResult> : IValuable<TResult> {
 
-        private readonly IValuable<T> source;
-        private readonly Func<T, TResult> selector;
+        private readonly IValuable<T> m_Source;
+        private readonly Func<T, TResult> m_Selector;
 
         public Valuable_ValueSelector(IValuable<T> source, Func<T, TResult> selector) {
-            this.source = source;
-            this.selector = selector;
+            this.m_Source = source;
+            this.m_Selector = selector;
         }
 
         public bool TryGetValue([MaybeNullWhen( false )] out TResult value) {
-            if (source.TryGetValue( out var tmp )) {
-                value = selector( tmp );
+            if (this.m_Source.TryGetValue( out var tmp )) {
+                value = this.m_Selector( tmp );
                 return true;
             }
             value = default;
@@ -57,17 +57,17 @@ namespace System {
     }
     internal readonly struct Valuable_ValueFilter<T> : IValuable<T> {
 
-        private readonly IValuable<T> source;
-        private readonly Func<T, bool> predicate;
+        private readonly IValuable<T> m_Source;
+        private readonly Func<T, bool> m_Predicate;
 
         public Valuable_ValueFilter(IValuable<T> source, Func<T, bool> predicate) {
-            this.source = source;
-            this.predicate = predicate;
+            this.m_Source = source;
+            this.m_Predicate = predicate;
         }
 
         public bool TryGetValue([MaybeNullWhen( false )] out T value) {
-            if (source.TryGetValue( out var tmp )) {
-                if (predicate( tmp )) {
+            if (this.m_Source.TryGetValue( out var tmp )) {
+                if (this.m_Predicate( tmp )) {
                     value = tmp;
                     return true;
                 }
