@@ -36,9 +36,9 @@ public readonly struct Option<T> : IEquatable<Option<T>>, IEquatable<T>, ICompar
 }
 public static class Option {
 
-    public static Option<T> Create<T>();
-    public static Option<T> Create<T>(T value);
-    public static Option<T> Create<T>(T? value);
+    public static Option<T> Some<T>(T value);
+    public static Option<T> None<T>();
+    public static Option<T> From<T>(T? value);
 
     public static bool AreEqual<T>(Option<T> value, Option<T> other);
     public static bool AreEqual<T>(Option<T> value, T other);

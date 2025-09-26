@@ -17,10 +17,6 @@ namespace System {
         public T? ValueOrDefault => this.m_HasValue ? this.m_Value : default; // always is null/default when Option has no value
 
         // Constructor
-        //public Option() {
-        //    this.hasValue = false;
-        //    this.value = default!;
-        //}
         internal Option(T value) {
             this.m_HasValue = true;
             this.m_Value = value;
@@ -67,7 +63,7 @@ namespace System {
         // Utils
         public override string ToString() {
             if (this.HasValue) return this.Value?.ToString() ?? "Null";
-            return "Nothing";
+            return "None";
         }
         public override bool Equals(object? other) {
             if (other is Option<T> other_) return this.IsEqualTo( other_ );
@@ -120,13 +116,13 @@ namespace System {
     public static class Option {
 
         // Create
-        public static Option<T> Create<T>() {
-            return default;
-        }
-        public static Option<T> Create<T>(T value) {
+        public static Option<T> Some<T>(T value) {
             return new Option<T>( value );
         }
-        public static Option<T> Create<T>(T? value) where T : struct {
+        public static Option<T> None<T>() {
+            return default;
+        }
+        public static Option<T> From<T>(T? value) where T : struct {
             if (value.HasValue) return new Option<T>( value.Value );
             return default;
         }
